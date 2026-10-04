@@ -1,1 +1,1 @@
-from .emotion_detection.emotion_detector import *  # noqa: F401
+from .emotion_detection.emotion_detector import *  # noqa: F401,F403
