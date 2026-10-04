@@ -10,3 +10,13 @@
       script: |
         #!/usr/bin/env sh
         rm -rf $(params.source)/*
+
+- name: test
+  description: Run unit tests
+  steps:
+    - name: test
+      image: python:3.10
+      script: |
+        #!/usr/bin/env bash
+        pip install nose
+        nosetests
