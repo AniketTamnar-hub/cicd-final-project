@@ -1,1 +1,12 @@
+Lint with flake8
+Run flake8 .
 
+Fix nose compatibility
+Run python -c "import pathlib, nose.suite; p=pathlib.Path(nose.suite.__file__); s=p.read_text(); s=s.replace('collections.Callable','collections.abc.Callable'); p.write_text(s)"
+
+Run unit tests with nose
+Run nosetests
+
+Ran 0 tests in 0.000s
+
+OK
