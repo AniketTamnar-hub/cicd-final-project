@@ -1,4 +1,12 @@
-- name: test
-  script: |
-    #!/usr/bin/env bash
-    nosetests
+- name: cleanup
+  description: Cleanup workspace
+  params:
+    - name: source
+      type: string
+      default: $(workspaces.source.path)
+  steps:
+    - name: cleanup
+      image: alpine:latest
+      script: |
+        #!/usr/bin/env sh
+        rm -rf $(params.source)/*
